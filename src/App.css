@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.display-region::-webkit-scrollbar{
+  width: 4px;
+  border-radius: 60%;
+}
+
+
+.display-region::-webkit-scrollbar-track {
+  box-shadow: transparent;
+}
+
+
+.display-region::-webkit-scrollbar-thumb {
+  background: #146EB4;
+  border-radius: 10px;
+}
