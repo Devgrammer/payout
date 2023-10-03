@@ -2,14 +2,14 @@
   
 @font-face {
   font-family: 'Galano Grotesque';
-  src:  url('./assets//fonts/Galano-Grotesque/Galano\ Grotesque.otf') format('otf');
-  font-weight: normal;
+  src:  url('./assets//fonts/Galano-Grotesque/galanogrotesque-regular.7ebf0c4f72b120a87c80.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
  
 };
 @font-face {
   font-family: 'Galano Grotesque';
-  src:  url('./assets//fonts/Galano-Grotesque/Galano\ Grotesque\ Medium.otf') format('otf');
+  src:  url('./assets//fonts/Galano-Grotesque/galanogrotesque-medium.04879d4a6c4c489a58e3.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 };

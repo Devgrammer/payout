@@ -18,15 +18,15 @@ const DashboardCard = ({id,
       className={`Dashboard-card-contianer box-border w-auto ${
         id === 1 ? "h-[154px] pt-4 p-0" : "h-[118px] p-4"
       } rounded-lg flex flex-col  gap-y-4 shadow-sm ${
-        isActive ? "bg-primary text-white" : "bg-white"
+        isActive ? "bg-primary text-white" : "bg-white text-septa "
       }`}
     >
       <div className="dashboard-card-title capitalize text-beta flex items-center gap-2 px-4">
-        {title} {isActive?<QuestionsLite />:<QuestionsDark/>}{" "}
+        {title} {isActive ? <QuestionsLite /> : <QuestionsDark />}{" "}
       </div>
       <div className="dashboard-card-amt flex justify-between items-center px-4">
         <div className="card-amt text-alpha font-medium">
-          {"₹"}{' '}{formatNumberWithCommas(amount)}
+          {"₹"} {formatNumberWithCommas(amount)}
         </div>
         <div className="card-order  flex items-center">
           <div className="order-text text-beta underline">
