@@ -95,7 +95,7 @@ const Dashboard = () => {
             <input
               type="text"
               placeholder="Order ID or transaction ID"
-              className="title-search-bar w-[200px] rounded-xl rounded-l-none rounded-b-0 pl-1 h-12 bg-transparent px-4 py-[9px] text-[#808080] border-none outline-none placeholder:text-[15px] placeholder:text-[#808080]"
+              className="title-search-bar w-[200px] rounded-xl rounded-l-none rounded-b-0 pl-1 h-12 bg-transparent px-4 py-[9px] text-[#808080] border-none outline-none  placeholder:text-[#808080] placeholder:text-[14px] text-ellipsis overflow-hidden"
             />
           </div>
           <div className="table-tool-console flex gap-x-4">

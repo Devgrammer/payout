@@ -1,5 +1,4 @@
 import moment from "moment/moment";
-import React from "react";
 
 const DBTable = () => {
   //Random Table Data List
@@ -10,7 +9,7 @@ const DBTable = () => {
       status: "success",
       transactionID: "987124568",
       refundDate: "2018-06-29T09:42:17.882Z",
-      orderAmount: "1432",
+      orderAmount: "1432.00",
     },
     {
       id: 564,
@@ -18,7 +17,7 @@ const DBTable = () => {
       status: "success",
       transactionID: "562389274",
       refundDate: "2013-08-23T05:12:17.882Z",
-      orderAmount: "3210",
+      orderAmount: "3210.00",
     },
     {
       id: 238,
@@ -26,7 +25,7 @@ const DBTable = () => {
       status: "processing",
       transactionID: "482917346",
       refundDate: "2020-11-15T11:22:13.882Z",
-      orderAmount: "2794",
+      orderAmount: "2794.00",
     },
     {
       id: 422,
@@ -34,7 +33,7 @@ const DBTable = () => {
       status: "success",
       transactionID: "134658721",
       refundDate: "2015-05-03T17:30:09.882Z",
-      orderAmount: "1871",
+      orderAmount: "1871.00",
     },
     {
       id: 175,
@@ -42,7 +41,7 @@ const DBTable = () => {
       status: "processing",
       transactionID: "982347519",
       refundDate: "2019-04-12T08:11:18.882Z",
-      orderAmount: "3985",
+      orderAmount: "3985.00",
     },
     {
       id: 846,
@@ -50,7 +49,7 @@ const DBTable = () => {
       status: "success",
       transactionID: "673215849",
       refundDate: "2017-02-01T14:58:05.882Z",
-      orderAmount: "2563",
+      orderAmount: "2563.00",
     },
   ];
 
@@ -59,7 +58,7 @@ const DBTable = () => {
     if (column === "orderID") {
       return (
         <td
-          className={`w-[calc(100%/5)] p-[14px] font-medium text-primary `}
+          className={`w-[calc(100%/5)] py-[14px] px-[12px] font-medium text-primary `}
           key={`tbody-cell-${index}`}
         >
           {cellData}
@@ -68,7 +67,7 @@ const DBTable = () => {
     } else if (column === "status") {
       return (
         <td
-          className={`w-[calc(100%/5)]  p-[14px] font-normal text-octa flex items-center gap-x-2 }`}
+          className={`w-[calc(100%/5)] py-[14px] px-[12px] font-normal text-octa flex items-center gap-x-2 }`}
           key={`tbody-cell-${index}`}
         >
           <div
@@ -82,16 +81,16 @@ const DBTable = () => {
     } else if (column === "orderAmount") {
       return (
         <td
-          className={`w-[calc(100%/5)]  p-[14px] font-normal text-octa flex justify-end }`}
+          className={`w-[calc(100%/5)]  py-[14px] px-[12px] font-normal text-octa flex justify-end }`}
           key={`tbody-cell-${index}`}
         >
-          <div>{"₹" + formatNumberWithCommas(cellData)}</div>
+          <div className="text-octa">{`₹${formatNumberWithCommas(cellData)}`}</div>
         </td>
       );
     } else if (column === "refundDate") {
       return (
         <td
-          className={`w-[calc(100%/5)] p-[14px] font-normal text-octa}`}
+          className="w-[calc(100%/5)] py-[14px] px-[12px] font-normal text-septa"
           key={`tbody-cell-${index}`}
         >
           {moment(cellData).format("DD MMM YYYY")},&nbsp;
@@ -101,7 +100,7 @@ const DBTable = () => {
     } else {
       return (
         <td
-          className={`w-[calc(100%/5)] p-[14px] font-normal text-octa}`}
+          className="w-[calc(100%/5)] py-[14px] px-[12px] font-normal text-septa"
           key={`tbody-cell-${index}`}
         >
           {cellData}
@@ -130,7 +129,7 @@ const DBTable = () => {
               headerIndex > 0 && (
                 <td
                   key={headerIndex}
-                  className={`w-[calc(100%/5)] capitalize p-[10px] flex justify-start items-center text-gamma font-medium text-[#4d4d4d] ${header === 'orderAmount' && 'flex justify-end'}`}
+                  className={`w-[calc(100%/5)] capitalize py-[10px] px-[12px] flex justify-start items-center text-gamma font-medium text-[#4d4d4d] ${header === 'orderAmount' && 'flex justify-end'}`}
                 >
                   {formatCamelCaseString(header)}
                 </td>
